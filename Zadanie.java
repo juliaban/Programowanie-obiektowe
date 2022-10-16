@@ -1,45 +1,44 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
-package com.mycompany.zadanie;
-
-/**
- *
- * @author inf154015
- */
-
-final class Owner{
-    int DogCount;
-    String OwnerName;
-}
-
-final class Dog{
-    int DogIndex;
-    String DogName;
-    String DogColour;
-    Owner DogOwner;
+final class Date{
+    int day;
+    String month;
+    int year;
+    Weather todaysWeather;
     
     void count(){
-        System.out.print("This dog has a name: " + DogName +"\n");
-        System.out.print("Owner of this dog is: " + DogOwner.OwnerName + "\n");
+        System.out.print("Today's date: " + day + " " + month + " " + year + "\n");
     }
 }
 
-public class Zadanie {
+
+final class Weather{
+    int tempDay;
+    int tempNight;
+    String precip;
+    String cloud;
+    
+    void count(){
+        System.out.print("Temperature on the day: " + tempDay + "\n");
+        System.out.print("Temperature at night: " + tempNight + "\n");
+        System.out.print("Amount of precip: " + precip + "\n");
+        System.out.print("Size of the cloud: " + cloud + "\n");
+    }
+}
+
+public class Zadanie1 {
 
     public static void main(String[] args) {
-        Owner newDogOwner = new Owner();
-        newDogOwner.DogCount = 3;
-        newDogOwner.OwnerName = "Tom";
-        Dog myNewDog = new Dog();
-        myNewDog.DogIndex = 44;
-        myNewDog.DogName = "Cookie";
-        myNewDog.DogColour = "white";
-        myNewDog.DogOwner = newDogOwner;
+        Date newDate = new Date();
+        newDate.day = 16;
+        newDate.month = "October";
+        newDate.year = 2022;
+        Weather newWeather = new Weather();
+        newWeather.tempDay = 23;
+        newWeather.tempNight = 13;
+        newWeather.precip = "No precipitation";
+        newWeather.cloud = "No clouds";
+        newDate.todaysWeather = newWeather;
         
-        myNewDog.count();
-        
+        newDate.count();
+        newWeather.count();
     }
 }
