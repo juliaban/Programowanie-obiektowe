@@ -1,36 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
-package com.mycompany.zadanie2;
-
-/**
- *
- * @author inf154015
- */
-
-final class Jeans {
-    int jeansPrice;
-    String jeansColour;
-    String jeansSize;
+final class BunchOfFlowers {
+    int bunchPrice;
+    int bunchType;
+    String bunchSize;
+    String bunchColour;
+    
         
-    public Jeans(int price, String colour, String size) {
-    this.jeansPrice = price;
-    this.jeansColour = colour;
-    this.jeansSize = size;
+    public BunchOfFlowers(int price, int typeOfFlowers, String size, String mainColour) {
+    this.bunchPrice = price;
+    this.bunchType = typeOfFlowers;
+    this.bunchSize = size;
+    this.bunchColour = mainColour;
     }
     
-    public Jeans(String price, String colour, String size) {
-        this(Integer.parseInt(price), colour, size);
+    public BunchOfFlowers(String price, String typeOfFlowers, String size, String mainColour) {
+        this(Integer.parseInt(price), Integer.parseInt(typeOfFlowers), size, mainColour);
     }
     
-    public Jeans(int price, String colour){
-        this(price, colour, "one size");
+    public BunchOfFlowers(int price, String size, String mainColour){
+        this(price, 5, size, mainColour);
     }
     
-    void itemInfo(){
-        System.out.println("Price is: " + jeansPrice + "\nColour is: " + jeansColour + "\nSize is: " + jeansSize);
+    public BunchOfFlowers(int price, String size){
+        this(price, 5, size, "white");
+    }
+    
+    void flowerInfo(){
+        System.out.println("The price for a bunch of flowers is: " + bunchPrice + " PLN" + "\nNumber of types of flowers: " + bunchType + "\nSize: " + bunchSize + "\nMain colour of flowers: " + bunchColour +"\n");
     }
 
 }
@@ -38,9 +33,11 @@ final class Jeans {
 public class Zadanie2 {
 
     public static void main(String[] args) {
-        Jeans newItem = new Jeans("34", "black", "skinny jenas");
-        Jeans noSize = new Jeans (20, "blue");
-        newItem.itemInfo();
-        noSize.itemInfo();
+        BunchOfFlowers newFlower = new BunchOfFlowers( 50, 4, "medium", "red");
+        BunchOfFlowers noType = new BunchOfFlowers(30, "small", "pink");
+        BunchOfFlowers noTypeAndMainColour = new BunchOfFlowers(70, "big");
+        newFlower.flowerInfo();
+        noType.flowerInfo();
+        noTypeAndMainColour.flowerInfo();
     }
 }
