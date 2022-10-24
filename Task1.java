@@ -24,7 +24,7 @@ final class Weather{
     }
 }
 
-public class Zadanie1 {
+public class Task1 {
 
     public static void main(String[] args) {
         Date newDate = new Date();
