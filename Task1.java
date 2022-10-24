@@ -4,7 +4,7 @@ final class Date{
     int year;
     Weather todaysWeather;
     
-    void count(){
+    void text(){
         System.out.print("Today's date: " + day + " " + month + " " + year + "\n");
     }
 }
@@ -16,7 +16,7 @@ final class Weather{
     String precip;
     String cloud;
     
-    void count(){
+    void text(){
         System.out.print("Temperature on the day: " + tempDay + "\n");
         System.out.print("Temperature at night: " + tempNight + "\n");
         System.out.print("Amount of precip: " + precip + "\n");
@@ -38,7 +38,7 @@ public class Task1 {
         newWeather.cloud = "No clouds";
         newDate.todaysWeather = newWeather;
         
-        newDate.count();
-        newWeather.count();
+        newDate.text();
+        newWeather.text();
     }
 }
