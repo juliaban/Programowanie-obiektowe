@@ -24,7 +24,7 @@ final class BunchOfFlowers {
         this(price, 5, size, "white");
     }
     
-    void flowerInfo(){
+    void PrintFlowersInfo(){
         System.out.println("The price for a bunch of flowers is: " + bunchPrice + " PLN" + "\nNumber of types of flowers: " + bunchType + "\nSize: " + bunchSize + "\nMain colour of flowers: " + bunchColour +"\n");
     }
 
@@ -36,8 +36,8 @@ public class Zadanie2 {
         BunchOfFlowers newFlower = new BunchOfFlowers( 50, 4, "medium", "red");
         BunchOfFlowers noType = new BunchOfFlowers(30, "small", "pink");
         BunchOfFlowers noTypeAndMainColour = new BunchOfFlowers(70, "big");
-        newFlower.flowerInfo();
-        noType.flowerInfo();
-        noTypeAndMainColour.flowerInfo();
+        newFlower.PrintFlowersInfo();
+        noType.PrintFlowersInfo();
+        noTypeAndMainColour.PrintFlowersInfo();
     }
 }
