@@ -30,7 +30,7 @@ final class BunchOfFlowers {
 
 }
 
-public class Zadanie2 {
+public class Task2 {
 
     public static void main(String[] args) {
         BunchOfFlowers newFlower = new BunchOfFlowers( 50, 4, "medium", "red");
