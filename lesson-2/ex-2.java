@@ -1,5 +1,5 @@
 interface Animal{
-    Animal speak(String spk);
+    Animal speakingAnimal(String spk);
 }
 
 final class Dog implements Animal{
@@ -9,7 +9,7 @@ final class Dog implements Animal{
     }
     @Override
     public
-    Animal speak(String spk){
+    Animal speakingAnimal(String spk){
         return new Dog(this.sound += spk);
     }
 }
