@@ -2,27 +2,28 @@ public class Application {
     public static void main(String[] args) {
         Forecast forecast = new Forecast.Fake();
         Weather weather = new Weather(forecast);
-        assert 6==weather.todaysTemperature();
+        System.out.println("Today temperature is: " + weather.getTodaysTemperature());
     }
 }
 
 
 public interface Forecast {
-    public int todaysTemperature();
+    public int getTodaysTemperature();
 
     public class Fake implements Forecast {
-        public int todaysTemperature() {
-            return 6;
+        public int getTodaysTemperature() {
+            return 12;
         }
     }
 }
 
 public class Weather {
     private final Forecast forecast;
-    public int todaysTemperature(){
-        return this.forecast.todaysTemperature();
-    }
 
+    public int getTodaysTemperature() {
+        return this.forecast.getTodaysTemperature();
+    }
+    
     public Weather(Forecast forecast) {
         this.forecast = forecast;
     }
