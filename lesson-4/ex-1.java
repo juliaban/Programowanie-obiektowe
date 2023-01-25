@@ -2,7 +2,8 @@ public class Application {
     public static void main(String[] args) {
         Forecast forecast = new Forecast.Fake();
         Weather weather = new Weather(forecast);
-        System.out.println("Today temperature is: " + weather.getTodaysTemperature());
+        System.out.println("Today temperature is: " + weather.todaysTemperature());
+        assert weather.todaysTemperature() == 12;
     }
 }
 
